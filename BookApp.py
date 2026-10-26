@@ -19,7 +19,7 @@ if ask_btn:
 
         try:
             with st.spinner("Please wait,Master is thinking to give a better most answer....."):
-                API_KEY = "AQ.Ab8RN6KkLWwP1Tutb4YvEe156vxeg3n0VpOHfDoUe7ExyyIzCg"
+                API_KEY = st.secrets["GEMINI_API_KEY"]
                 client = genai.Client(api_key=API_KEY)
 
                 response = client.models.generate_content(
